@@ -1,0 +1,48 @@
+@mixin place {
+    @include place-content;
+    @include place-items;
+    @include place-self;
+}
+@mixin place-content {
+    $PROPS: (
+        center: center,
+        start: start,
+        end: end,
+        between: space-between,
+        around: space-around,
+        evenly: space-evenly,
+        stretch: stretch
+    );
+    @each $key, $value in $PROPS {
+        .place-content-#{$key} {
+            place-content: $value;
+        }
+    }
+}
+@mixin place-items {
+    $PROPS: (
+        start,
+        end,
+        center,
+        stretch
+    );
+    @each $value in $PROPS {
+        .place-items-#{$value} {
+            place-items: $value;
+        }
+    }
+}
+@mixin place-self {
+    $PROPS: (
+        auto,
+        start,
+        end,
+        center,
+        stretch
+    );
+    @each $value in $PROPS {
+        .place-self-#{$value} {
+            place-self: $value;
+        }
+    }
+}
