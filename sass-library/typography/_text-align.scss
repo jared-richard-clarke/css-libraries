@@ -1,0 +1,8 @@
+@mixin text-align {
+    $ALIGNMENTS: (left, center, right);
+    @each $value in $ALIGNMENTS {
+        .text-#{$value} {
+            text-align: $value;
+        }
+    }
+}
