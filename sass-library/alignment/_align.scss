@@ -1,0 +1,49 @@
+@mixin align {
+    @include align-content;
+    @include align-items;
+    @include align-self;
+}
+@mixin align-content {
+    $PROPS: (
+        center: center,
+        start: flex-start,
+        end: flex-end,
+        between: space-between,
+        around: space-around,
+        evenly: space-evenly
+    );
+    @each $key, $value in $PROPS {
+        .content-#{$key} {
+            align-content: $value;
+        }
+    }
+}
+@mixin align-items {
+    $PROPS: (
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        stretch: stretch,
+        baseline: baseline
+    );
+    @each $key, $value in $PROPS {
+        .items-#{$key} {
+            align-items: $value;
+        }
+    }
+}
+@mixin align-self {
+    $PROPS: (
+        auto: auto,
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        stretch: stretch,
+        baseline: baseline
+    );
+    @each $key, $value in $PROPS {
+        .self-#{$key} {
+            align-self: $value;
+        }
+    }
+}
