@@ -1,0 +1,44 @@
+$PREFIX: "folio";
+$FONT-STACK: (
+    sans: (
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif,
+    ),
+    serif: (
+        ui-serif,
+        Georgia,
+        Cambria,
+        "Times New Roman",
+        Times,
+        serif,
+    ),
+    mono: (
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace,
+    ),
+);
+@mixin font-custom-properties {
+    @each $key, $value in $FONT-STACK {
+        --#{$PREFIX}-font-#{$key}: #{$value};
+    }
+}
+@mixin font-family {
+    @each $key, $value in $FONT-STACK {
+        .font-#{$key} {
+            font-family: var(--#{$PREFIX}-font-#{$key});
+        }
+    }
+}
