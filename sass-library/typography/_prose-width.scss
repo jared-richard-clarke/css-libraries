@@ -1,0 +1,5 @@
+@mixin max-width-prose {
+    .max-w-prose {
+        max-width: 65ch;
+    }
+}
