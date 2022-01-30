@@ -1,0 +1,63 @@
+@mixin flexbox {
+    @include display-flex;
+    @include flex-direction;
+    @include flex-wrap;
+    @include flex-properties;
+}
+
+@mixin display-flex {
+    .flex {
+        display: flex;
+    }
+}
+
+@mixin flex-direction {
+    .flex-row {
+        flex-direction: row;
+      }
+    .flex-column {
+        flex-direction: column;
+    }
+}
+
+@mixin flex-wrap {
+    .flex-nowrap {
+        flex-wrap: nowrap;
+      }
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+}
+
+@mixin flex-properties {
+    // grow: true | shrink: true | initial: false
+    .flex-1 {
+        flex: 1 1 0%;
+    }
+    // grow: true | shrink: true | initial: true
+    .flex-auto {
+        flex: 1 1 auto;
+    }
+    // grow: false | shrink: true | initial: true
+    .flex-initial {
+        flex: 0 1 auto;
+    }
+    // grow: false | shrink: false | initial: true
+    .flex-none {
+        flex: none;
+    }
+    // flex-grow
+    .flex-grow-0 {
+        flex-grow: 0;
+    }
+    .flex-grow {
+        flex-grow: 1;
+    }
+    // flex-shrink
+    .flex-shrink-0 {
+        flex-shrink: 0;
+    }
+    .flex-shrink {
+        flex-shrink: 1;
+    }
+}
