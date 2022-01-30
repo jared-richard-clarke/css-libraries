@@ -1,0 +1,28 @@
+@mixin object-styles {
+    @include object-fit;
+    @include object-position;
+}
+$OBJECT_FIT_PROPS: (contain, cover, fill, none, scale-down);
+@mixin object-fit {
+    @each $prop in $OBJECT_FIT_PROPS {
+        .object-#{$prop} {
+            object-fit: $prop;
+        }
+    }
+}
+$OBJECT_POSITION_PROPS: (center, bottom, top, left, right);
+@mixin object-position {
+    @each $prop in $OBJECT_POSITION_PROPS {
+        .object-#{$prop} {
+            object-position: $prop;
+        }
+        @if $prop == left or $prop == right {
+            .object-#{$prop}-top {
+                object-position: $prop top;
+            }
+            .object-#{$prop}-bottom {
+                object-position: $prop bottom;
+            }
+        }
+    }
+}
