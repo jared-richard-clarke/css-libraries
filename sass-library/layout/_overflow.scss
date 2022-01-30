@@ -1,0 +1,34 @@
+$OVERFLOW_PROPS: (
+    auto,
+    hidden,
+    visible,
+    scroll
+);
+@mixin overflow-styles {
+    @include overflow;
+    @include overflow-x;
+    @include overflow-y;
+}
+@mixin overflow {
+    @each $prop in $OVERFLOW_PROPS {
+        .overflow-#{$prop} {
+            overflow: $prop
+        }
+    }
+}
+@mixin overflow-x {
+    @each $prop in $OVERFLOW_PROPS {
+        .overflow-x-#{$prop} {
+            overflow-x: $prop
+        }
+    }
+}
+
+
+@mixin overflow-y {
+    @each $prop in $OVERFLOW_PROPS {
+        .overflow-y-#{$prop} {
+            overflow-y: $prop
+        }
+    }
+}
