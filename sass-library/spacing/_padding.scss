@@ -1,0 +1,74 @@
+@mixin padding {
+    @include padding-full;
+    @include padding-horizontal;
+    @include padding-vertical;
+    @include padding-left;
+    @include padding-right;
+    @include padding-top;
+    @include padding-bottom;
+}
+$SCALARS: (
+    0: 0rem, 
+    1: 0.25rem, 
+    2: 0.5rem, 
+    3: 1rem, 
+    4: 1.5rem, 
+    5: 3rem,
+    6: 4rem,
+    7: 5rem
+);
+@mixin padding-full {
+    @each $key, $value in $SCALARS {
+        .p-#{$key} {
+            padding: $value;
+        }
+    }
+}
+
+@mixin padding-horizontal {
+    @each $key, $value in $SCALARS {
+        .px-#{$key} {
+            padding-left: $value;
+            padding-right: $value;
+        }
+    }
+}
+
+@mixin padding-vertical {
+    @each $key, $value in $SCALARS {
+        .py-#{$key} {
+            padding-top: $value;
+            padding-bottom: $value;
+        }
+    }
+}
+
+@mixin padding-left {
+    @each $key, $value in $SCALARS {
+        .pl-#{$key} {
+            padding-left: $value;
+        }
+    }
+}
+
+@mixin padding-right {
+    @each $key, $value in $SCALARS {
+        .pr-#{$key} {
+            padding-right: $value;
+        }
+    }
+}
+@mixin padding-top {
+    @each $key, $value in $SCALARS {
+        .pt-#{$key} {
+            padding-top: $value;
+        }
+    }
+}
+@mixin padding-bottom {
+    @each $key, $value in $SCALARS {
+        .pb-#{$key} {
+            padding-bottom: $value;
+        }
+    }
+}
