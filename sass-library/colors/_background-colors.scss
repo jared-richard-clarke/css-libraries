@@ -1,0 +1,21 @@
+@mixin background-base {
+    .bg-transparent {
+        background-color: transparent;
+    }
+    .bg-current {
+        background-color: currentColor;
+    }
+    .bg-white {
+        background-color: #FFF;
+    }
+    .bg-black {
+        background-color: #000;
+    }
+}
+@mixin background-colors($name, $color-map) {
+    @each $key, $value in $color-map {
+        .bg-#{$name}-#{$key} {
+            background-color: $value;
+        }
+    }
+}
