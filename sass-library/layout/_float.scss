@@ -1,0 +1,29 @@
+@mixin float-properties {
+    @include float;
+    @include clear;
+}
+@mixin float {
+    .float-right {
+        float: right;
+    }
+    .float-left {
+        float: left;
+    }
+    .float-none {
+        float: none;
+    }
+}
+@mixin clear {
+    .clear-right {
+        clear: right;
+    }
+    .clear-left {
+        clear: left;
+    }
+    .clear-both {
+        clear: both;
+    }
+    .clear-none {
+        clear: none;
+    }
+}
