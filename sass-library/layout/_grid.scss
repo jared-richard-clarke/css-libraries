@@ -1,0 +1,16 @@
+@mixin grid($name) {
+  $START_COLUMN: 1;
+  $TOTAL_COLUMNS: 12;
+  
+  .#{$name}-grid {
+    --#{$name}-total-columns: #{$TOTAL_COLUMNS};
+    display: grid;
+    grid-template-columns: repeat(var(--#{$name}-total-columns), minmax(0, 1fr));
+  }
+
+  @for $index from $START_COLUMN through $TOTAL_COLUMNS {
+    .#{$name}-columns-#{$index} {
+      grid-column: span $index;
+    }
+  }
+}
