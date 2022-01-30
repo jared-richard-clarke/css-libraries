@@ -1,4 +1,3 @@
-$PREFIX: "folio";
 $FONT-STACK: (
     sans: (
         ui-sans-serif,
@@ -32,13 +31,13 @@ $FONT-STACK: (
 );
 @mixin font-custom-properties {
     @each $key, $value in $FONT-STACK {
-        --#{$PREFIX}-font-#{$key}: #{$value};
+        --font-#{$key}: #{$value};
     }
 }
 @mixin font-family {
     @each $key, $value in $FONT-STACK {
         .font-#{$key} {
-            font-family: var(--#{$PREFIX}-font-#{$key});
+            font-family: var(--font-#{$key});
         }
     }
 }
