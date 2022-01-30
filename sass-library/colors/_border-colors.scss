@@ -1,0 +1,21 @@
+@mixin border-base {
+    .border-transparent {
+        border-color: transparent;
+    }
+    .border-current {
+        border-color: currentColor;
+    }
+    .border-white {
+        border-color: #FFF;
+    }
+    .border-black {
+        border-color: #000;
+    }
+}
+@mixin border-colors($name, $color-map) {
+    @each $key, $value in $color-map {
+        .border-#{$name}-#{$key} {
+            border-color: $value;
+        }
+    }
+}
