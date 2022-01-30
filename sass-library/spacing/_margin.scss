@@ -1,0 +1,74 @@
+@mixin margin {
+    @include margin-full;
+    @include margin-horizontal;
+    @include margin-vertical;
+    @include margin-left;
+    @include margin-right;
+    @include margin-top;
+    @include margin-bottom;
+}
+$SCALARS: (
+    0: 0rem, 
+    1: 0.25rem, 
+    2: 0.5rem, 
+    3: 1rem, 
+    4: 1.5rem, 
+    5: 3rem,
+    6: 4rem,
+    7: 5rem
+);
+@mixin margin-full {
+    @each $key, $value in $SCALARS {
+        .m-#{$key} {
+            margin: $value;
+        }
+    }
+}
+
+@mixin margin-horizontal {
+    @each $key, $value in $SCALARS {
+        .mx-#{$key} {
+            margin-left: $value;
+            margin-right: $value;
+        }
+    }
+}
+
+@mixin margin-vertical {
+    @each $key, $value in $SCALARS {
+        .my-#{$key} {
+            margin-top: $value;
+            margin-bottom: $value;
+        }
+    }
+}
+
+@mixin margin-left {
+    @each $key, $value in $SCALARS {
+        .ml-#{$key} {
+            margin-left: $value;
+        }
+    }
+}
+
+@mixin margin-right {
+    @each $key, $value in $SCALARS {
+        .mr-#{$key} {
+            margin-right: $value;
+        }
+    }
+}
+@mixin margin-top {
+    @each $key, $value in $SCALARS {
+        .mt-#{$key} {
+            margin-top: $value;
+        }
+    }
+}
+@mixin margin-bottom {
+    @each $key, $value in $SCALARS {
+        .mb-#{$key} {
+            margin-bottom: $value;
+        }
+    }
+}
