@@ -1,0 +1,8 @@
+@mixin list-position {
+    $POSITIONS: (inside, outside);
+    @each $value in $POSITIONS {
+        .list-#{$value} {
+            list-style-position: $value;
+        }
+    }
+}
