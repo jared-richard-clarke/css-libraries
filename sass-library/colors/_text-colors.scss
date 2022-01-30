@@ -1,0 +1,21 @@
+@mixin text-base {
+    .text-transparent {
+        color: transparent;
+    }
+    .text-current {
+        color: currentColor;
+    }
+    .text-white {
+        color: #FFF;
+    }
+    .text-black {
+        color: #000;
+    }
+}
+@mixin text-colors($name, $color-map) {
+    @each $key, $value in $color-map {
+        .text-#{$name}-#{$key} {
+            color: $value;
+        }
+    }
+}
