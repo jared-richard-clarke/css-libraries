@@ -1,0 +1,8 @@
+@mixin list-type {
+    $TYPES: (none, disc, decimal);
+    @each $value in $TYPES {
+        .list-#{$value} {
+            list-style-type: $value;
+        }
+    }
+}
