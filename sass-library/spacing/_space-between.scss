@@ -1,0 +1,29 @@
+@mixin space-between {
+    @include space-x;
+    @include space-y;
+}
+$SCALARS: (
+    0: 0rem, 
+    1: 0.25rem, 
+    2: 0.5rem, 
+    3: 1rem, 
+    4: 1.5rem, 
+    5: 3rem,
+    6: 4rem,
+    7: 5rem
+);
+@mixin space-x {
+    @each $key, $value in $SCALARS {
+        .space-x-#{$key} > * + * {
+            margin-left: $value;
+        }
+    }
+}
+
+@mixin space-y {
+    @each $key, $value in $SCALARS {
+        .space-y-#{$key} > * + * {
+            margin-top: $value;
+        }
+    }
+}
