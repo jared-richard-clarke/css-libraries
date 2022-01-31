@@ -1,0 +1,29 @@
+@use "font-size" as size;
+@use "font-weight" as weight;
+@use "line-height" as height;
+@use "letter-spacing" as spacing;
+@use "prose-width" as prose;
+@use "text-align" as align;
+@use "text-decoration" as decoration;
+@use "text-transform" as transform;
+@use "list-type" as type;
+@use "list-position" as position;
+@use "text-overflow" as overflow;
+@use "whitespace";
+@use "word-break" as break;
+
+@mixin typography {
+    @include size.font-size;
+    @include weight.font-weight;
+    @include height.line-height;
+    @include spacing.letter-spacing;
+    @include prose.max-width-prose;
+    @include align.text-align;
+    @include decoration.text-decoration;
+    @include transform.text-transform;
+    @include type.list-type;
+    @include position.list-position;
+    @include overflow.text-overflow;
+    @include whitespace.whitespace;
+    @include break.word-break;
+}
