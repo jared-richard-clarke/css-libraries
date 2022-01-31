@@ -1,0 +1,13 @@
+@mixin text-transform {
+    $TRANSFORMATIONS: (
+        uppercase: uppercase,
+        lowercase: lowercase,
+        capitalize: capitalize,
+        "normal-case": none,
+    );
+    @each $key, $value in $TRANSFORMATIONS {
+        .#{$key} {
+            text-transform: $value;
+        }
+    }
+}
