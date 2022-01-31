@@ -1,0 +1,14 @@
+@mixin whitespace {
+    $OPTIONS: (
+        normal,
+        nowrap,
+        pre,
+        pre-line,
+        pre-wrap
+    );
+    @each $value in $OPTIONS {
+        .whitespace-#{$value} {
+            white-space: $value;
+        }
+    }
+}
