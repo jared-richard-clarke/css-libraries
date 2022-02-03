@@ -1,0 +1,14 @@
+@mixin scale {
+  $SCALARS: (
+    50: 0.5,
+    75: 0.75,
+    100: 1,
+    125: 1.25,
+    150: 1.5,
+  );
+  @each $key, $value in $SCALARS {
+    .scale-#{$key} {
+      transform: scale($value);
+    }
+  }
+}
