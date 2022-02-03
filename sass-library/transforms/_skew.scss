@@ -1,0 +1,24 @@
+@mixin skew {
+  @include skew-x;
+  @include skew-y;
+}
+$SCALARS: (
+  6: 6deg,
+  12: 12deg,
+  neg-6: -6deg,
+  neg-12: -12deg
+);
+@mixin skew-x {
+  @each $key, $value in $SCALARS {
+    .skew-x-#{$key} {
+      transform: skewX($value);
+    }
+  }
+}
+@mixin skew-y {
+  @each $key, $value in $SCALARS {
+    .skew-y-#{$key} {
+      transform: skewY($value);
+    }
+  }
+}
