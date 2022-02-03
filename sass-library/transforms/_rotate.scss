@@ -1,0 +1,16 @@
+@mixin rotate {
+  $SCALARS: (
+    15: 15deg,
+    45: 45deg,
+    90: 90deg,
+    180: 180deg,
+    neg-15: -15deg,
+    neg-45: -45deg,
+    neg-90: -90deg,
+  );
+  @each $key, $value in $SCALARS {
+    .rotate-#{$key} {
+      transform: rotate($value);
+    }
+  }
+}
