@@ -1,3 +1,9 @@
+@mixin width-layout {
+    @include width;
+    @include min-width;
+    @include max-width;
+}
+
 @mixin width {
     $SCALARS: (
         auto: auto,
@@ -23,6 +29,7 @@
         }
     }
 }
+
 @mixin min-width {
     $SCALARS: (
         0: 0px,
