@@ -9,7 +9,7 @@
     );
     @each $key, $value in $SCALARS {
         .tracking-#{$key} {
-            line-height: $value;
+            letter-spacing: $value;
         }
     }
 }
