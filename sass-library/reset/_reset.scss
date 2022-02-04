@@ -69,19 +69,15 @@
         text-decoration: inherit;
     }
 
-    /*
-Add the correct font weight in Edge and Safari.
-*/
+// Add the correct font weight in Edge and Safari.
 
     b,
     strong {
         font-weight: bolder;
     }
 
-    /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
-*/
+// 1. Use the user's configured `mono` font family by default.
+// 2. Correct the odd `em` font sizing in all browsers.
 
     code,
     kbd,
@@ -191,8 +187,8 @@ Add the correct font weight in Edge and Safari.
     // 2. Correct the outline style in Safari.
 
     [type="search"] {
-        -webkit-appearance: textfield; /* 1 */
-        outline-offset: -2px; /* 2 */
+        -webkit-appearance: textfield; // 1
+        outline-offset: -2px; // 2
     }
 
     // Remove the inner padding in Chrome and Safari on macOS.
