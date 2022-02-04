@@ -1,8 +1,8 @@
 @mixin z-index {
-    $Z_INDEX_PROPS: (auto, 1, 2, 3, 4, 5);
-    @each $prop in $Z_INDEX_PROPS {
-        .z-#{$prop} {
-            z-index: $prop;
+    $SCALARS: (auto, 1, 2, 3, 4, 5);
+    @each $value in $SCALARS {
+        .z-#{$value} {
+            z-index: $value;
         }
     }
 }
