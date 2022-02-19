@@ -1,8 +1,11 @@
+// align: generates all alignment utilities.
 @mixin align {
     @include align-content;
     @include align-items;
     @include align-self;
 }
+// align-content: generates a series of align-content utilities.
+// @include align-content; -> .content-center { align-content: center; } ...
 @mixin align-content {
     $PROPS: (
         center: center,
@@ -18,6 +21,8 @@
         }
     }
 }
+// align-items: generates a series of align-items utilities.
+// @include align-items; -> .items-start { align-items: flex-start; } ...
 @mixin align-items {
     $PROPS: (
         start: flex-start,
@@ -32,6 +37,8 @@
         }
     }
 }
+// align-self: generates a series of align-self utilities.
+// @include align-self; -> .self-auto { align-self: auto; } ...
 @mixin align-self {
     $PROPS: (
         auto: auto,
