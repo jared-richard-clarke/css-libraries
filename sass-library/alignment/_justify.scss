@@ -1,8 +1,11 @@
+// justify: generates all justify utilities.
 @mixin justify {
     @include justify-content;
     @include justify-items;
     @include justify-self;
 }
+// justify-content: generates a series of justify-content utilities.
+// @include justify-content; -> .justify-start { justify-content: flex-start; } ...
 @mixin justify-content {
     $PROPS: (
         start: flex-start,
@@ -18,6 +21,8 @@
         }
     }
 }
+// justify-items: generates a series of justify-items utilities.
+// @include justify-items; -> .justify-items-start { justify-items: start; } ...
 @mixin justify-items {
     $PROPS: (
         start,
@@ -31,6 +36,8 @@
         }
     }
 }
+// justify-self: generates a series of justify-self utilities.
+// @include justify-self; -> .justify-self-auto { justify-self: auto; } ...
 @mixin justify-self {
     $PROPS: (
         auto,
