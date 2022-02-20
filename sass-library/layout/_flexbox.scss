@@ -78,7 +78,7 @@
 }
 
 // flex-basis: generates a series of flex-basis utilities — 1 through 12, 1/12 to full width.
-// @include opacity; -> .opacity-50 { opacity: 0.5; } ...
+// @include flex-basis; -> .basis-5 { flex-basis: 41.666666%; } ...
 
 @mixin flex-basis {
   $SCALARS: (
