@@ -1,3 +1,6 @@
+// text-base: generates a series of basic text-color utilities.
+// transparent, currentColor, inherit, #FFF(white), #000(black)
+
 @mixin text-base {
     .text-transparent {
         color: transparent;
@@ -15,6 +18,11 @@
         color: #000;
     }
 }
+
+// text-colors: generates a series of text colors from a name and color map.
+// @include text-colors("red", ( 100: #FFEFEF, 200: #FFDCDC )); ->
+// .text-red-100 { color: #FFEFEF; } ...
+
 @mixin text-colors($name, $color-map) {
     @each $key, $value in $color-map {
         .text-#{$name}-#{$key} {
