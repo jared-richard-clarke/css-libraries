@@ -1,3 +1,6 @@
+// letter-spacing: generates a sequence of letter spacings.
+// @include letter-spacing; -> .tracking-tighter { letter-spacing: -0.05em; } ...
+
 @mixin letter-spacing {
     $SCALARS: (
         tighter: -0.05em,
