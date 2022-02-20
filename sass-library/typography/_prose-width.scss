@@ -1,6 +1,3 @@
-// max-width-prose: generates utility that sets an element's max-width to 65ch.
-// "ch" is the width of an inherited font's "o" character.
-
 @mixin max-width-prose {
     .max-w-prose {
         max-width: 65ch;
