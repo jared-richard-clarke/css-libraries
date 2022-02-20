@@ -1,8 +1,13 @@
+// width-layout: generates all width utilities.
+
 @mixin width-layout {
     @include width;
     @include min-width;
     @include max-width;
 }
+
+// width: generates a sequence of width utilities.
+// @include width; -> .w-auto { width: auto; } ...
 
 @mixin width {
     $SCALARS: (
@@ -30,6 +35,9 @@
     }
 }
 
+// min-width: generates a sequence of min-width utilities.
+// @include min-width; -> .min-w-full { min-width: 100%; } ...
+
 @mixin min-width {
     $SCALARS: (
         0: 0px,
@@ -43,6 +51,10 @@
         }
     }
 }
+
+// max-width: generates a sequence of max-width utilities.
+// @include max-width; -> .max-w-lg { max-width: 32rem; } ...
+
 @mixin max-width {
     $SCALARS: (
         full: 100%,
