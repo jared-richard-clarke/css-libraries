@@ -1,3 +1,6 @@
+// opacity: generates a series of opacity utilities — 0 through 100, transparent to opaque.
+// @include opacity; -> .opacity-50 { opacity: 0.5; } ...
+
 @mixin opacity {
     $SCALARS: (
         0: 0,
