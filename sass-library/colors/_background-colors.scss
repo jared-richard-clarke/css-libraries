@@ -1,3 +1,5 @@
+// background-base: generates a series of basic background utilities.
+// transparent, currentColor, inherit, #FFF(white), #000(black)
 @mixin background-base {
     .bg-transparent {
         background-color: transparent;
@@ -15,6 +17,9 @@
         background-color: #000;
     }
 }
+// background-colors: generates a series of background colors from a name and color map.
+// @include background-colors("red", ( 100: #FFEFEF, 200: #FFDCDC )); ->
+// .bg-red-100 { background-color: #FFEFEF; } ...
 @mixin background-colors($name, $color-map) {
     @each $key, $value in $color-map {
         .bg-#{$name}-#{$key} {
