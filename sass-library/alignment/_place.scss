@@ -1,11 +1,14 @@
 // place: generates all place utilities.
+
 @mixin place {
     @include place-content;
     @include place-items;
     @include place-self;
 }
+
 // place-content: generates a series of place-content utilities.
 // @include place-content; -> .place-content-center { place-content: center; } ...
+
 @mixin place-content {
     $PROPS: (
         center: center,
@@ -22,8 +25,10 @@
         }
     }
 }
+
 // place-items: generates a series of place-items utilities.
 // @include place-items; -> .place-items-start { place-items: start; } ...
+
 @mixin place-items {
     $PROPS: (
         start,
@@ -37,8 +42,10 @@
         }
     }
 }
+
 // place-self: generates a series of place-self utilities.
 // @include place-self; -> .place-self { place-self: auto; } ...
+
 @mixin place-self {
     $PROPS: (
         auto,
