@@ -1,5 +1,5 @@
-// space-between: generates all spacing utilities.
-// Adds spacing between the children of a containing element with either margin-left or margin-top properties.
+// space-between adds spacing between the children of a containing element 
+// with either margin-left for horizontal spacing or margin-top for vertical spacing.
 
 @mixin space-between {
     @include space-x;
@@ -17,9 +17,6 @@ $SCALARS: (
     7: 5rem
 );
 
-// space-x: generates a sequence of horizontal spacing utilities — 0 through 7, least to greatest.
-// @include space-x; -> .space-x-1 > * + * { margin-left: 0.25rem; } ...
-
 @mixin space-x {
     @each $key, $value in $SCALARS {
         .space-x-#{$key} > * + * {
@@ -27,9 +24,6 @@ $SCALARS: (
         }
     }
 }
-
-// space-y: generates a sequence of vertical spacing utilities — 0 through 7, least to greatest.
-// @include space-y; -> .space-y-1 > * + * { margin-top: 0.25rem; } ...
 
 @mixin space-y {
     @each $key, $value in $SCALARS {
