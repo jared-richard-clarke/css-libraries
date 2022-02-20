@@ -1,12 +1,7 @@
-// object-layout: generates all object-layout utilities.
-
 @mixin object-layout {
   @include object-fit;
   @include object-position;
 }
-
-// object-fit: generates a series of object-fit utilities.
-// @include object-fit; -> .object-contain { object-fit: contain; } ...
 
 @mixin object-fit {
   $FITTINGS: (contain, cover, fill, none, scale-down);
@@ -16,9 +11,6 @@
     }
   }
 }
-
-// object-position: generates a series of object-position utilities.
-// @include object-position; -> .object-center { object-position: center; } ...
 
 @mixin object-position {
   $POSITIONS: (center, bottom, top, left, right);
