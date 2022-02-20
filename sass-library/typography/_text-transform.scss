@@ -1,6 +1,3 @@
-// text-transform: generates text-transformation utilities.
-// @include text-transformation; -> .uppercase { text-transform: uppercase; } ...
-
 @mixin text-transform {
     $TRANSFORMATIONS: (
         uppercase: uppercase,
