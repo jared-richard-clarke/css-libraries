@@ -1,3 +1,19 @@
+// grid: generates a grid container and 12 grid-column utilities.
+// The total number of columns is embedded within a CSS variable, allowing
+// later modification without preprocessor compilation.
+// 
+// @include grid("base"); -> 
+// .base-grid {
+//   --base-total-columns: 12;
+//   display: grid;
+//   grid-template-columns: repeat(var(--base-total-columns), minmax(0, 1fr));
+// }
+// ...
+// .base-columns-5 {
+//   grid-column: span 5;
+// }
+// ...
+
 @mixin grid($name) {
   $START_COLUMN: 1;
   $TOTAL_COLUMNS: 12;
