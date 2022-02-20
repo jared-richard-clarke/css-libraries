@@ -1,12 +1,7 @@
-// float-layout: generates all float utilities.
-
 @mixin float-layout {
     @include float;
     @include clear;
 }
-
-// float: generates a series of float utilities.
-// @include float; -> .float-right { float: right; } ...
 
 @mixin float {
     .float-right {
@@ -19,9 +14,6 @@
         float: none;
     }
 }
-
-// clear: generates a series of clear utilities.
-// @include clear; -> .clear-right { clear: right; } ...
 
 @mixin clear {
     .clear-right {
