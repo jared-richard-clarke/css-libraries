@@ -1,6 +1,3 @@
-// border-base: generates a series of basic border utilities.
-// transparent, currentColor, #FFF(white), #000(black)
-
 @mixin border-base {
     .border-transparent {
         border-color: transparent;
