@@ -1,6 +1,3 @@
-// text-decoration: generates text-decoration utilities.
-// @include text-decoration; -> .underline { text-decoration: underline; } ...
-
 @mixin text-decoration {
     $DECORATIONS: (
         underline: underline,
