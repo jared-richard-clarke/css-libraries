@@ -1,3 +1,5 @@
+// padding: generates all padding utilities.
+
 @mixin padding {
     @include padding-full;
     @include padding-horizontal;
@@ -7,6 +9,7 @@
     @include padding-top;
     @include padding-bottom;
 }
+
 $SCALARS: (
     0: 0rem, 
     1: 0.25rem, 
@@ -17,6 +20,10 @@ $SCALARS: (
     6: 4rem,
     7: 5rem
 );
+
+// padding-full: generates a sequence of padding shorthand utilities.
+// @include padding-full; -> .p-1 { padding: 0.25rem; } ...
+
 @mixin padding-full {
     @each $key, $value in $SCALARS {
         .p-#{$key} {
@@ -24,6 +31,9 @@ $SCALARS: (
         }
     }
 }
+
+// padding-horizontal: generates a sequence of horizontal padding utilities.
+// @include padding-horizontal; -> .px-1 { padding-left: 0.25rem; padding-right: 0.25rem; } ...
 
 @mixin padding-horizontal {
     @each $key, $value in $SCALARS {
@@ -34,6 +44,9 @@ $SCALARS: (
     }
 }
 
+// padding-vertical: generates a sequence of vertical padding utilities.
+// @include padding-vertical; -> .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; } ...
+
 @mixin padding-vertical {
     @each $key, $value in $SCALARS {
         .py-#{$key} {
@@ -43,6 +56,9 @@ $SCALARS: (
     }
 }
 
+// padding-left: generates a sequence of padding-left utilities.
+// @include padding-left; -> .pl-1 { padding-left: 0.25rem; } ...
+
 @mixin padding-left {
     @each $key, $value in $SCALARS {
         .pl-#{$key} {
@@ -51,6 +67,9 @@ $SCALARS: (
     }
 }
 
+// padding-right: generates a sequence of padding-right utilities.
+// @include padding-right; -> .pr-1 { padding-right: 0.25rem; } ...
+
 @mixin padding-right {
     @each $key, $value in $SCALARS {
         .pr-#{$key} {
@@ -58,6 +77,10 @@ $SCALARS: (
         }
     }
 }
+
+// padding-top: generates a sequence of padding-top utilities.
+// @include padding-top; -> .pt-1 { padding-top: 0.25rem; } ...
+
 @mixin padding-top {
     @each $key, $value in $SCALARS {
         .pt-#{$key} {
@@ -65,6 +88,10 @@ $SCALARS: (
         }
     }
 }
+
+// padding-bottom: generates a sequence of padding-bottom utilities.
+// @include padding-bottom; -> .pb-1 { padding-bottom: 0.25rem; } ...
+
 @mixin padding-bottom {
     @each $key, $value in $SCALARS {
         .pb-#{$key} {
