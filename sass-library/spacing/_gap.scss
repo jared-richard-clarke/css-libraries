@@ -1,8 +1,11 @@
+// gap: generates all gap utilities.
+
 @mixin gap {
     @include gap-full;
     @include gap-x;
     @include gap-y;
 }
+
 $SCALARS: (
     0: 0rem,
     1: 0.25rem,
@@ -13,6 +16,10 @@ $SCALARS: (
     6: 4rem,
     7: 5rem,
 );
+
+// gap-full: generates a sequence of gap shorthand utilities — 0 through 7, least to greatest.
+// @include gap-full; -> .gap-1 { gap: 0.25rem; } ...
+
 @mixin gap-full {
     @each $key, $value in $SCALARS {
         .gap-#{$key} {
@@ -20,6 +27,10 @@ $SCALARS: (
         }
     }
 }
+
+// gap-x: generates a sequence of horizontal gap utilities — 0 through 7, least to greatest.
+// @include gap-x; -> .gap-x-1 { column-gap: 0.25rem; } ...
+
 @mixin gap-x {
     @each $key, $value in $SCALARS {
         .gap-x-#{$key} {
@@ -27,6 +38,10 @@ $SCALARS: (
         }
     }
 }
+
+// gap-y: generates a sequence of vertical gap utilities — 0 through 7, least to greatest.
+// @include gap-y; -> .gap-y-1 { row-gap: 0.25rem; } ...
+
 @mixin gap-y {
     @each $key, $value in $SCALARS {
         .gap-y-#{$key} {
