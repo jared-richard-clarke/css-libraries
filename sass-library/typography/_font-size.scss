@@ -1,6 +1,3 @@
-// font-size: generates a sequence of font-sizes.
-// @include font-size; -> .text-base { font-size: 1rem; } ...
-
 @mixin font-size {
     $SCALARS: (
         xs: 0.75rem,
