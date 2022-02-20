@@ -1,3 +1,6 @@
+// list-type: generates list-type utilities.
+// @include list-type; -> .list-disc { list-style-type: disc; } ...
+
 @mixin list-type {
     $TYPES: (none, disc, decimal);
     @each $value in $TYPES {
