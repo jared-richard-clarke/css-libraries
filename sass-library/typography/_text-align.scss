@@ -1,3 +1,6 @@
+// text-align: generates text-alignment utilities.
+// @include text-align; -> .text-left { text-align: left; } ...
+
 @mixin text-align {
     $ALIGNMENTS: (left, center, right);
     @each $value in $ALIGNMENTS {
