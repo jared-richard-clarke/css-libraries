@@ -1,3 +1,6 @@
+// rotate: generates a sequence of rotating transformation utilities.
+// @include rotate; -> .rotate-15 { transform: rotate(15deg); } ...
+
 @mixin rotate {
   $SCALARS: (
     15: 15deg,
