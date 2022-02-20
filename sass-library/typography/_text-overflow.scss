@@ -1,3 +1,5 @@
+// text-overflow: generates text-overflow utilities.
+
 @mixin text-overflow {
     .truncate {
         overflow: hidden;
