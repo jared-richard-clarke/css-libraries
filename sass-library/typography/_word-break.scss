@@ -1,6 +1,3 @@
-// word-break: generates word-break utilities.
-// @include word-break; -> .break-all { word-break: break-all; } ...
-
 @mixin word-break {
     .break-normal {
         overflow-wrap: normal;
