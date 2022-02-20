@@ -1,3 +1,6 @@
+// border-base: generates a series of basic border utilities.
+// transparent, currentColor, #FFF(white), #000(black)
+
 @mixin border-base {
     .border-transparent {
         border-color: transparent;
@@ -12,6 +15,11 @@
         border-color: #000;
     }
 }
+
+// border-colors: generates a series of border colors from a name and color map.
+// @include border-colors("red", ( 100: #FFEFEF, 200: #FFDCDC,)); ->
+// .border-red-100 { border-color: #FFEFEF; } ...
+
 @mixin border-colors($name, $color-map) {
     @each $key, $value in $color-map {
         .border-#{$name}-#{$key} {
