@@ -1,5 +1,3 @@
-// overflow-layout: generates all overflow-layout utilities.
-
 @mixin overflow-layout {
     @include overflow;
     @include overflow-x;
@@ -14,9 +12,6 @@ $PROPERTIES: (
     clip
 );
 
-// overflow: generates a series of overflow utilities.
-// @include overflow; -> .overflow-auto { overflow: auto; } ...
-
 @mixin overflow {
     @each $value in $PROPERTIES {
         .overflow-#{$value} {
@@ -25,9 +20,6 @@ $PROPERTIES: (
     }
 }
 
-// overflow-x: generates a series of horizontal overflow utilities.
-// @include overflow-x; -> .overflow-x-auto { overflow-x: auto; } ...
-
 @mixin overflow-x {
     @each $value in $PROPERTIES {
         .overflow-x-#{$value} {
@@ -35,9 +27,6 @@ $PROPERTIES: (
         }
     }
 }
-
-// overflow-y: generates a series of vertical overflow utilities.
-// @include overflow-y; -> .overflow-y-auto { overflow-y: auto; } ...
 
 @mixin overflow-y {
     @each $value in $PROPERTIES {
