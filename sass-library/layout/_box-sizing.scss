@@ -1,6 +1,3 @@
-// box-sizing: generates box-sizing utilities.
-// @include box-sizing; -> .box-border { box-sizing: border-box; } ...
-
 @mixin box-sizing {
     .box-border {
         box-sizing: border-box;
