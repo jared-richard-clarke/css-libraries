@@ -1,3 +1,6 @@
+// font-weight: generates a sequence of font-weights.
+// @include font-weight; -> .text-normal { font-weight: 400; } ...
+
 @mixin font-weight {
     $SCALARS: (
         thin: 100,
