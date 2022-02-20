@@ -1,3 +1,6 @@
+// whitespace: generates whitespace utilities.
+// @include whitespace; -> .whitespace-normal { white-space: normal; } ...
+
 @mixin whitespace {
     $OPTIONS: (
         normal,
