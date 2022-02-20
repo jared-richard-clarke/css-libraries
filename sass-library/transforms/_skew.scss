@@ -1,5 +1,3 @@
-// skew: generates all skew transformation utilities.
-
 @mixin skew {
   @include skew-x;
   @include skew-y;
@@ -12,9 +10,6 @@ $SCALARS: (
   neg-12: -12deg
 );
 
-// skew-x: generates a sequence of horizontal skew transformation utilities.
-// @include skew-x; -> .skew-x-12 { transform: skewX(12); } ...
-
 @mixin skew-x {
   @each $key, $value in $SCALARS {
     .skew-x-#{$key} {
@@ -22,9 +17,6 @@ $SCALARS: (
     }
   }
 }
-
-// skew-y: generates a sequence of vertical skew transformation utilities.
-// @include skew-y; -> .skew-y-12 { transform: skewY(12); } ...
 
 @mixin skew-y {
   @each $key, $value in $SCALARS {
