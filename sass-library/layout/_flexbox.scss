@@ -1,3 +1,5 @@
+// flexbox: generates all flexbox utilities.
+
 @mixin flexbox {
     @include display-flex;
     @include flex-direction;
@@ -6,11 +8,17 @@
     @include flex-basis;
 }
 
+// display-flex: generates flexbox display utility.
+// @include display-flex; -> .flex { display: flex; } 
+
 @mixin display-flex {
     .flex {
         display: flex;
     }
 }
+
+// flex-direction: generates a series of flex-direction utilities.
+// @include flex-direction; -> .flex-row { flex-direction: row; } ...
 
 @mixin flex-direction {
     .flex-row {
@@ -21,6 +29,9 @@
     }
 }
 
+// flex-wrap: generates a series of flex-wrap utilities.
+// @include flex-wrap; -> .flex-nowrap { flex-wrap: nowrap; } ...
+
 @mixin flex-wrap {
     .flex-nowrap {
         flex-wrap: nowrap;
@@ -29,6 +40,9 @@
         flex-wrap: wrap;
     }
 }
+
+// flex-properties: generates a series of flex shorthand utilities.
+// @include flex-properties; -> .flex-1 { flex: 1 1 0%; } ...
 
 @mixin flex-properties {
     // grow: true | shrink: true | initial: false
@@ -62,6 +76,9 @@
         flex-shrink: 1;
     }
 }
+
+// flex-basis: generates a series of flex-basis utilities — 1 through 12, 1/12 to full width.
+// @include opacity; -> .opacity-50 { opacity: 0.5; } ...
 
 @mixin flex-basis {
   $SCALARS: (
