@@ -1,6 +1,3 @@
-// text-base: generates a series of basic text-color utilities.
-// transparent, currentColor, inherit, #FFF(white), #000(black)
-
 @mixin text-base {
     .text-transparent {
         color: transparent;
