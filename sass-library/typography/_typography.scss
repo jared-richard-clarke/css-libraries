@@ -12,6 +12,8 @@
 @use "whitespace";
 @use "word-break" as break;
 
+// typography: generates all typography utilities.
+
 @mixin typography {
     @include size.font-size;
     @include weight.font-weight;
