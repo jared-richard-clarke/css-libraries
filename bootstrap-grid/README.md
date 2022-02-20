@@ -3,7 +3,8 @@ A concise version of [Bootstrap 5's](https://getbootstrap.com/) compiled grid sy
 ## Current Styles
 - Responsive Breakpoints
 - container, row, and column
-- gap and offset
+- gap
 ## Removed Styles
-- `:root` declaration and styles.
+- `:root` declaration and styles
+- offsets
 - Bootstrap utilities
