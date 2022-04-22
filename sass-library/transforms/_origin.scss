@@ -1,0 +1,16 @@
+@mixin origin {
+  $POSITIONS: (center, bottom, top, left, right);
+  @each $value in $POSITIONS {
+    .origin-#{$value} {
+      transform-origin: $value;
+    }
+    @if $value == left or $value == right {
+      .origin-top-#{$value} {
+        transform-origin: top $value;
+      }
+      .origin-bottom-#{$value} {
+        transform-origin: bottom $value;
+      }
+    }
+  }
+}
