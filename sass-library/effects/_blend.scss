@@ -1,0 +1,39 @@
+@mixin blend {
+  @include blend-mode;
+  @include bg-blend-mode;
+}
+
+$MODES: (
+  normal,
+  multiply,
+  screen,
+  overlay,
+  darken,
+  lighten,
+  color-dodge,
+  color-burn,
+  hard-light,
+  soft-light,
+  difference,
+  exclusion,
+  hue,
+  saturation,
+  color,
+  luminosity
+);
+
+@mixin blend-mode {
+  @each $value in $MODES {
+    .mix-blend-#{$value} {
+      mix-blend-mode: $value;
+    }
+  }
+}
+
+@mixin bg-blend-mode {
+  @each $value in $MODES {
+    .bg-blend-#{$value} {
+      background-blend-mode: $value;
+    }
+  }
+}
