@@ -1,0 +1,43 @@
+@use "sass:math";
+
+@mixin translate {
+  @include translate-y;
+  @include translate-x;
+}
+
+$SCALARS: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+  -25: -25%,
+  -50: -50%,
+  -75: -75%
+);
+
+@mixin translate-y {
+  @each $key, $value in $SCALARS {
+    @if $key < 0 {
+      .-translate-y-#{math.abs($key)} {
+        transform: translateY($value);
+      }
+    } @else {
+      .translate-y-#{$key} {
+        transform: translateY($value);
+      }
+    }
+  }
+}
+@mixin translate-x {
+  @each $key, $value in $SCALARS {
+    @if $key < 0 {
+      .-translate-x-#{math.abs($key)} {
+        transform: translateX($value);
+      }
+    } @else {
+      .translate-x-#{$key} {
+        transform: translateX($value);
+      }
+    }
+  }
+}
