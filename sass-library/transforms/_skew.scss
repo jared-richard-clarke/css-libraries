@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin skew {
   @include skew-x;
   @include skew-y;
@@ -6,22 +8,34 @@
 $SCALARS: (
   6: 6deg,
   12: 12deg,
-  neg-6: -6deg,
-  neg-12: -12deg
+  -6: -6deg,
+  -12: -12deg,
 );
 
 @mixin skew-x {
   @each $key, $value in $SCALARS {
-    .skew-x-#{$key} {
-      transform: skewX($value);
+    @if $key < 0 {
+      .-skew-x-#{math.abs($key)} {
+        transform: skewX($value);
+      }
+    } @else {
+      .skew-x-#{$key} {
+        transform: skewX($value);
+      }
     }
   }
 }
 
 @mixin skew-y {
   @each $key, $value in $SCALARS {
-    .skew-y-#{$key} {
-      transform: skewY($value);
+    @if $key < 0 {
+      .-skew-y-#{math.abs($key)} {
+        transform: skewY($value);
+      }
+    } @else {
+      .skew-y-#{$key} {
+        transform: skewY($value);
+      }
     }
   }
 }
