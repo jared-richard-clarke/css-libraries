@@ -1,5 +1,4 @@
 # CSS Debuggers
-A growing collection of CSS styles I use to debug my CSS.
 
-## Contents
-- `zaydek-debug.css` -> The CSS box model is transparent, often hiding things like collapsing margins. These styles make the boxes visible.
+Many aspects of CSS are transparent, often hiding things like collapsing margins or overflow.
+This library contains a collection of styles that make these elements visible.
