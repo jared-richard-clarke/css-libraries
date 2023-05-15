@@ -1,8 +1,8 @@
-@mixin user-select {
-  $VALUES: (none, text, all, auto);
-  @each $value in $VALUES {
-    .select-#{$value} {
-      user-select: $value;
+@mixin hyphens {
+    $VALUES: (none, manual, auto);
+    @each $value in $VALUES {
+        .hyphens-#{$value} {
+            hyphens: $value;
+        }
     }
-  }
 }
