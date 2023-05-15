@@ -1,8 +1,8 @@
 @mixin cursor {
-  $VALUES: (auto, default, pointer, wait, text, move, help, not-allowed);
-  @each $value in $VALUES {
-    .cursor-#{$value} {
-      cursor: $value;
+    $VALUES: (auto, default, pointer, wait, text, move, help, not-allowed);
+    @each $value in $VALUES {
+        .cursor-#{$value} {
+            cursor: $value;
+        }
     }
-  }
 }
