@@ -1,0 +1,20 @@
+@mixin resize {
+  $NONE: none;
+  $DIRECTIONS: (
+    y: vertical,
+    x: horizontal
+  );
+  $BOTH: both;
+
+  .resize-none {
+    resize: $NONE;
+  }
+  @each $key, $value in $DIRECTIONS {
+    .resize-#{$key} {
+      resize: $value;
+    }
+  }
+  .resize {
+    resize: $BOTH;
+  }
+}
