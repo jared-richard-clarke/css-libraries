@@ -1,6 +1,6 @@
 @mixin user-select {
-  $OPTIONS: (none, text, all, auto);
-  @each $value in $OPTIONS {
+  $VALUES: (none, text, all, auto);
+  @each $value in $VALUES {
     .select-#{$value} {
       user-select: $value;
     }
