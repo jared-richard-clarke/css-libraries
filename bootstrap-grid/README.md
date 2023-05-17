@@ -11,4 +11,4 @@ A concise version of [Bootstrap 5](https://getbootstrap.com/)'s compiled grid sy
 
 ## Removed Styles
 
-- Bootstrap utilities
+- utilities
